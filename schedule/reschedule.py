@@ -608,7 +608,7 @@ def apply_reschedule(cards_to_update, filtered_nids, did, stats, start_time):
     if config.auto_disperse_after_reschedule:
         filtered_nid_string = ids2str(filtered_nids)
         mw.reset()
-        disperse_siblings(did, True, filtered_nid_string, f"{cnt} cartes replanifiees")
+        disperse_siblings(did, True, filtered_nid_string, f"{cnt} cartes replanifiees", skip_due_today=True)
     else:
         mw.reset()
         tooltip(
